@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>HTML Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <section class="brand"> Header </section> <section class="brand"> Lorem ipsum </section> <section class="title"> Lorem ipsum dolor sit amet. </section>
+    </body>
+</html>
+
+
+section {
+padding: 20px;  
+margin: 20px;  
+}
+.title {
+background-color: #A6BE9E;
+font-weight: bold;
+}
+.article {
+background-color: #357074;
+color: #FFF3BC;
+font-size: x-small;
+}
+.brand {
+background-color: #082833;
+color: #C24726;
+font-weight: bold;
+font-size: x-large;
+}
