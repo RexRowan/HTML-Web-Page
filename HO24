@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+    </head>
+    <body>
+        <button onclick="handleClick(doSomethingElse)">Click Me</button>  
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
+
+function handleClick(callback) {
+    alert('This button has been clicked');
+    if (callback) {
+        callback();
+    }
+}
+function doMore() {
+    alert('I could process more logic here');
+}
+function doSomethingElse() {
+    document.writeln('Test Message');
+}
