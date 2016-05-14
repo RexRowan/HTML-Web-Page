@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+    </head>
+    <body>
+        <button onclick="startWorker()">Start Worker</button>
+        <button onclick="stopWorker()">Stop Worker</button>
+<ul id="output">
+</ul>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
+
+
+var worker;
+function startWorker() {
+    worker = new Worker("js/worker.js");
+    worker.onmessage = function(event) {
+        document.getElementById("output").innerHTML += '<li>' + event.data + '</li>';
+    };
+}
+function stopWorker() {
+    worker.terminate();
+}
