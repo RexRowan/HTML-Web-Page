@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>HTML Page</title>
+    <link rel="stylesheet" href="sass/style.css" />
+</head>
+<body>
+<header>
+    Welcome!
+</header>
+<p>
+    Integer vel metus non turpis consectetur convallis. Nullam ipsum eros, mollis eget varius faucibus, tempor eget nisi. Vivamus vel tellus ut magna interdum pharetra a vel massa. Maecenas viverra viverra mollis. Sed vestibulum molestie est, vel varius leo convallis condimentum. Mauris id nisl nisi. Curabitur leo sapien, mattis eu eleifend sit amet, venenatis eget dolor. Nam imperdiet ullamcorper pharetra. Etiam viverra erat et dolor lobortis porta.
+</p>
+<footer>
+    &copy; 2016 by Me
+</footer>
+</body>
+</html>
+
+
+$brandColorPrimary: #08424D;
+$brandColorSeconday:  #65665A;
+$brandPadding: 12px;
+@mixin standardPadding($value) {
+    padding: $value;
+}
+body {
+    header {
+        color: $brandColorSeconday;
+    }
+    footer {
+        color: $brandColorPrimary;
+    }
+    p {
+        @include standardPadding($brandPadding);
+        background-color: $brandColorSeconday;
+        color: #FFFFFF;
+    }
+}
+
+
+{
+    "version": "0.1.0",
+    "command": "node-sass",
+    "isShellCommand": true,
+    "args": ["sass/style.scss", "sass/style.css"]
+}
